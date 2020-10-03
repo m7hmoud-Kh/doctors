@@ -1,0 +1,892 @@
+/*
+** template   : doctors
+** created by : mahmoud khairy
+** created in : 8/8/2020
+*/
+:root
+{
+    --main-color:#42beed;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/**start the nav**/
+.links
+{
+    margin-top: 6% !important;
+}
+.links li, 
+.links li a
+{
+    display: inline;
+    padding: 1%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    transition:  all 0.45s ease-in-out;
+    color: #000;
+}
+.links li:hover 
+{
+    color: var(--main-color);
+    cursor: pointer;
+}
+.links li a:hover 
+{
+    color: var(--main-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+.icon
+{
+    margin-top: 4%;
+    font-size: 46px;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+.menu-bar::before
+{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -26px;
+    right: 59px;
+    border-style: solid;
+    border-width: 13px;
+    border-color: transparent transparent var(--main-color) transparent;
+}
+.menu-bar
+{
+    position: relative;
+    width: 300px;
+    background-color: var(--main-color);
+    margin-left: 58%;
+    margin-top: 2.5%;
+    transition: all 0.45s ease-in-out;
+    display: none;
+}
+.menu-bar:hover
+{
+   box-shadow: 10px 10px 10px;
+}
+.menu-bar .menulist li,
+.menu-bar .menulist li a
+{
+    display: block;
+    text-align: left;
+    margin-bottom: 2px;
+    color: #fff;
+    padding: 8px;
+    text-transform: uppercase;
+    transition: all 0.45s ease-in-out;
+}
+.menu-bar .menulist li:hover,
+.menu-bar .menulist li a:hover
+{
+  transform:translate(5px);
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.cross 
+{
+    position: relative;
+    top: 8px;
+    right: 16px;
+    color: #040404;
+    font-size: 30px;
+    cursor: pointer;
+}
+.cross:hover 
+{
+    color: #f00;
+}
+@media (max-width:767px)
+{
+    .links
+    {
+        display: none;
+    }
+    .icon
+    {
+        display: block;
+        margin-top: 1%;
+        font-size: 35px;
+    }
+    .menu-bar
+    {
+        display: none;
+        margin-left: 53%;
+        top: -24px;
+        right: 9px;
+        margin-top: 8%;
+    }
+    .menu-bar::before
+    {
+        top: -25px;
+    }
+    .trangile
+    {
+    margin-top: -9%;
+    }
+}
+@media (min-width:768px) and (max-width:991px)
+{
+    .links
+    {
+        display: none;
+    }
+    .icon
+    {
+        display: block;
+        margin-top: 1%;
+        font-size: 35px;
+    }
+    .menu-bar
+    {
+        display: none;
+        margin-left: 68%;
+        top: -25px;
+        right: 23px;
+        margin-top: 6%
+    }
+    .trangile
+    {
+    margin-top: -9%;
+    }
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    .links
+    {
+        display: none;
+    }
+    .icon
+    {
+        display: block;
+    }
+    .menu-bar
+    {
+        display: none;
+    }
+}
+/**end the nav**/
+/*start the header**/
+.silderdoc
+{
+    padding-top: 1%;
+}
+.caption
+{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: translate(-25px,-20px);
+}
+.caption h1
+{
+   font-size: 60px;
+   text-transform: uppercase;
+   font-weight: bold;
+   color: var(--main-color);
+}
+.caption p 
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#73797b;
+}
+.caption button 
+{
+  padding: 1%;
+  margin-top: 1%;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon
+{
+    background-color: #000;
+    padding: 10px;
+    border-radius: 4px;
+}
+.carousel-indicators li
+{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.carousel-indicators .active
+{
+    background-color: var(--main-color);
+}
+/*end the header**/
+/**start the sec1**/
+.sec1
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.sec1 h1
+{
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.sec1 p 
+{
+    margin-bottom: 2%;
+}
+.card
+{
+    max-width: 32.3333%;
+    margin-left: 1%;
+}
+.card .img
+{
+    width: 348px;
+}
+.card .img img 
+{
+    width: 100%;
+}
+.card .caption_card
+{
+    padding: 8%;
+    background-color: #000;
+    color: #fff;
+    border-top: 3px solid #fff;
+    transition: all 0.45s ease-in-out;
+}
+.card:hover .caption_card
+{
+    background-color: #096a8f;
+}
+ .about 
+{
+    width: 50px;
+    display: flex;
+    height: 50px;
+    background-color: var(--main-color) ;
+    color: #000;
+    font-weight: bold;
+    font-size: 40px;
+    justify-content: center;
+    position: relative;
+    top: -31%;
+    left: 40%;
+}
+.about::before
+{
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-color: transparent transparent var(--main-color) transparent;
+    border-width: 26px;
+    top: -51px;
+    left: 0px;
+}
+ .about::after
+{
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-color: var(--main-color) transparent transparent transparent;
+    border-width: 26px;
+    top: 50px;
+    left: -1px;
+}
+.caption_card h4 
+{
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+.caption_card p 
+{
+    font-size: 13px;
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    .card:first-of-type
+    {
+        max-width: 100%;
+        margin-bottom: 2%;
+    }
+    .card:first-of-type .img 
+    {
+        width: 100%;
+    }
+    .card:first-of-type .about 
+    {
+        left: 47%;
+    }
+    .card:not(:first-of-type)
+    {
+        max-width: 48%;
+        margin-left: 1.5%;
+    }
+    .card:not(:first-of-type) .img 
+    {
+        width: 100%;
+    }
+}
+@media (min-width:768px) and (max-width:991px)
+{
+    
+    .card
+    {
+        max-width: 100%;
+        margin-bottom: 3%;
+    }
+     
+    .card .img 
+    {
+        width: 100%;
+    }
+    .about 
+    {
+        left: 44%;
+    }
+}
+@media (max-width:767px)
+{
+    .card
+    {
+        max-width: 100%;
+        margin-bottom: 3%;
+    }
+     
+    .card .img 
+    {
+        width: 100%;
+    }
+    .about 
+    {
+        left: 44%;
+    }
+}
+/**end the sec1*/
+/**start the sec2**/
+.sec2 
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #3c9dc8;
+}
+.sec2 h1 
+{
+    color: #fff;
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: capitalize;
+}
+.sec2 p a
+{
+    color: #fff;
+    margin-bottom: 4%; 
+}
+.sec2 p a:hover
+{
+    color:#fff;
+    text-decoration: none;
+}
+.sec2 .img-ser
+{
+    position: relative;
+    height: 150px;
+    top: 0;
+    left: 0;
+    border: 2px solid #fff;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+/**end the sec2**/
+/*start the sec3**/
+.sec3 
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.sec3 h1 
+{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: capitalize;
+}
+.sec3 p 
+{
+    margin-bottom: 4%;
+}
+.sec3 .team
+{
+    max-width:16.5%;
+}
+.sec3 .img-te 
+{
+    width: 200px;
+}
+.img-te img 
+{
+    width: 100%;
+    border: 2px solid #eee;
+}
+.caption_team,
+.caption_team_under 
+{ 
+   background-color: #3a9cc8;
+   color: #fff;
+   width: 200px;
+   height: 200px;
+   padding: 3%;
+   position: relative;
+   transition: all 0.45s ease-in-out;
+}
+.caption_team h5,
+.caption_team_under h5 
+{
+  margin-top: 4%;
+}
+.caption_team p ,
+.caption_team_under p 
+{
+  font-size: 15px;
+}
+.caption_team::before,
+.caption_team_under::before
+{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px;
+    z-index: 999;
+}
+.caption_team::before
+{
+    border-color: #3a9cc8 transparent transparent transparent;
+    top: 100%;
+    left: 40%;
+}
+.caption_team_under::before
+{
+    border-color: transparent transparent #3a9cc8 transparent;
+    top: -15%;
+    left: 40%;
+}
+.caption_team:hover,
+.caption_team_under:hover 
+{
+    background-color: #000;
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    .sec3 .team:first-of-type,
+    .sec3 .team:nth-of-type(2),
+    .sec3 .team:nth-of-type(3),
+    .sec3 .team:nth-of-type(4)
+    {
+        max-width: 25%;
+        margin-left:1%;
+    }
+    .sec3 .team:nth-of-type(5),
+    .sec3 .team:last-of-type
+    {
+        width: 20%;
+        margin-top: 2%;
+    }
+    .sec3 .team:nth-of-type(5)
+    {
+        margin-left: 12%;
+    }
+    .sec3 .team:last-of-type
+    {
+        margin-left: 23%;
+    }
+    .row 
+    {
+        margin-left: 50px !important;
+    }
+
+}
+@media(min-width:768px) and (max-width:991px)
+{
+    .sec3 .team:first-of-type,
+    .sec3 .team:nth-of-type(2),
+    .sec3 .team:nth-of-type(3),
+    .sec3 .team:nth-of-type(4),
+    .sec3 .team:nth-of-type(5),
+    .sec3 .team:last-of-type
+    {
+        max-width: 50%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+
+}
+@media (max-width:767px)
+{
+    .sec3 .team:first-of-type,
+    .sec3 .team:nth-of-type(2),
+    .sec3 .team:nth-of-type(3),
+    .sec3 .team:nth-of-type(4),
+    .sec3 .team:nth-of-type(5),
+    .sec3 .team:last-of-type
+    {
+        max-width: 50%;
+        margin-left: 8%;
+        margin-bottom: 2%;
+    }
+}
+/* end the sec3**/
+/*start the sec4**/
+.sec4 
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: url("../img/ven3.jpg");
+    background-size: cover;
+    position: relative;
+}
+.sec4 .layout 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+}
+.sec4 .form 
+{
+    position: relative;
+    z-index: 999;
+    background-color: #3a9dca;
+    padding: 3%;
+}
+.form h1 
+{
+ color: #fff;
+ font-weight: bold;
+ text-transform: capitalize;
+ padding-bottom: 5%;
+}
+.form .coninfo h3,
+.seinfo h3
+{
+  color: #fff;
+  text-transform: uppercase;
+}
+.form .coninfo hr
+.seinfo hr 
+{
+    color: #ccc;
+    border-top: 4px solid rgba(0, 0, 0, 0.1);
+    margin-top: 0rem !important;
+    width: 300px !important;
+}
+.infomat 
+{
+    color: #fff;
+    margin-bottom: 4%;
+}
+.infomat span:first-of-type
+{
+    font-weight: bold;
+    margin-left: 1.5%;
+}
+.seinfo input:not(:last-of-type) ,
+.seinfo textarea
+{
+    display: block;
+    width: 100%;
+    margin-bottom: 2%;
+    padding: 1%;
+    border-radius: 8px;
+    position: relative;
+}
+input:last-of-type
+{
+    padding: 10px;
+    width: 150px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+input::placeholder,
+textarea::placeholder
+{
+    text-transform: uppercase;
+}
+@media(min-width:768px) and (max-width:991px)
+{
+    .form .coninfo 
+    {
+        margin-bottom: 3%;
+    }
+    .seinfo input:last-of-type
+    {
+        margin-left: 36%;
+        margin-top: 1%;
+    }
+}
+@media(max-width:767px)
+{
+    .form .coninfo 
+    {
+        margin-bottom: 3%;
+    }
+    .seinfo input:last-of-type
+    {
+        margin-left: 36%;
+        margin-top: 1%;
+    }
+    .infomat 
+    {
+       margin-left: 16%;
+    }
+}
+/*end the sec4**/
+/**start the footer*/
+footer
+{
+    background-color: #1b4a61;
+    color: #fff;
+    padding: 10px;
+}
+footer div a
+{
+    font-weight: bold;
+    color: #fff;
+}
+footer div a:hover
+{
+    color: var(--main-color);
+    text-decoration: none;
+}
+footer .social
+{
+    margin-left: 0.5%;
+    color: #fff;
+    transition: all 0.45s ease-in-out;
+    font-size: 20px;
+}
+footer .social:hover
+{
+    color: var(--main-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+/**end the footer*/
+
+/*****start the heart page****/
+.hearts
+{
+    background-color: #fdfdfd;
+}
+.hearts h1 
+{
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.doccard 
+{
+    max-width: 31.3333%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-top: 5%;
+    transition: all 0.45s ease-in-out;
+}
+.doccard:hover 
+{
+    box-shadow: 10px 10px 10px #000;
+}
+.docimg
+{
+    width: 100%;
+}
+.docimg img 
+{
+    width: 100%;
+}
+.doccaption
+{
+    background-color: #00adb5;
+    padding: 8px;
+    width: 300px;
+    margin-left: 0%;
+    color: #fff;
+}
+.doccaption  h4,
+.doccaption  h5 
+{
+    color: #393e46 ;
+}
+.doccaption span 
+{
+    color:#eeeeee ;
+    font-weight: bold;
+}
+.doccaption h5:last-of-type i 
+{
+    color: gold;
+}
+.doccaption .book
+{
+    margin-left: 27%;
+    padding: 5px;
+    color: #030202;
+    font-weight: bold;
+    text-decoration: none;
+}
+/** end the heart page***/
+/**start the patient**/
+.heartdoc
+{
+    min-width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.heartimg img 
+{
+    width: 150%;
+    display: inline-block;
+    padding: 5px;
+    background-color: #ae8080;
+}
+.heartinfo 
+{
+    margin-left: 25%;    
+}
+.heartinfo  div 
+{
+    margin-bottom: 9%;
+    font-size: 23px;
+    text-transform: capitalize;
+}
+.heartinfo  div span 
+{
+    font-weight: bold;
+    color: #000;
+}
+.heartinfo div:not(:last-of-type) i 
+{
+    font-size: 50px;
+    color: #318fb5 ;
+    padding: 5px;
+}
+.heartinfo .rat i 
+{ 
+    color: gold !important;
+}
+.heartinfo .true
+{
+    color: #080;
+    font-size: 34px;
+    margin-left: 0;
+}
+.heartinfo  .rat
+{
+    font-size: 40px;
+    font-size: 30px;
+}
+.formsick
+{
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+.formsick span 
+{
+    font-size: 30px;
+    margin-bottom: 10%;
+    display: block;
+}
+.formsick i 
+{
+    color:#318fb5 ;
+}
+.formsick div 
+{
+    position: relative;
+}
+.formsick i.form 
+{
+    margin-bottom: 0;
+    position: absolute;
+    top: 23%;
+    left: -13%;
+    font-size: 26px;
+}
+.formsick input
+{
+    background-color: transparent;
+    padding: 10px;
+    width: 150%;
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    font-weight: normal;
+    color: #000;
+}
+.formsick .select 
+{
+    width: 150%;
+    margin-top: 2%;
+}
+.formsick textarea 
+{
+    margin-top: 2%;
+    border: 1px solid var(--main-color);
+    width: 150%;
+    height: 150px;
+}
+.formsick input::placeholder,
+.formsick textarea::placeholder
+{
+    text-transform: capitalize;
+}
+.formsick .login
+{
+    padding: 10px;
+    width: 150px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.formsick .err 
+{
+    font-weight: normal;
+    margin-bottom: 2%;
+    padding: 6px;
+}
+/**end the patient**/
+/***
+color : #00adb5  green;
+color : #eeeeee  white;
+color : #393e46  balck;
+color : #cabbe9  purpule;
+**/

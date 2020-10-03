@@ -1,0 +1,623 @@
+/*
+** template   : doctors
+** created by : mahmoud khairy
+** created in : 8/8/2020
+*/
+:root {
+    --main-color: #42beed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**start the nav**/
+.links {
+    margin-top: 6% !important;
+}
+
+.links li,
+.links li a {
+    display: inline;
+    padding: 2%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.45s ease-in-out;
+    color: #000;
+}
+
+.links li:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.links li a:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon {
+    margin-top: 4%;
+    font-size: 46px;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+.menu-bar::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -26px;
+    right: 59px;
+    border-style: solid;
+    border-width: 13px;
+    border-color: transparent transparent var(--main-color) transparent;
+}
+
+.menu-bar {
+    position: relative;
+    width: 300px;
+    background-color: var(--main-color);
+    margin-left: 58%;
+    margin-top: 2.5%;
+    transition: all 0.45s ease-in-out;
+    display: none;
+}
+
+.menu-bar:hover {
+    box-shadow: 10px 10px 10px;
+}
+
+.menu-bar .menulist li,
+.menu-bar .menulist li a {
+    display: block;
+    text-align: left;
+    margin-bottom: 2px;
+    color: #fff;
+    padding: 8px;
+    text-transform: uppercase;
+    transition: all 0.45s ease-in-out;
+}
+
+.menu-bar .menulist li:hover,
+.menu-bar .menulist li a:hover {
+    transform: translate(5px);
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cross {
+    position: relative;
+    top: 8px;
+    right: 16px;
+    color: #040404;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cross:hover {
+    color: #f00;
+}
+
+@media (max-width:767px) {
+    .links {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        margin-top: 1%;
+        font-size: 35px;
+    }
+
+    .menu-bar {
+        display: none;
+        margin-left: 53%;
+        top: -24px;
+        right: 9px;
+        margin-top: 8%;
+    }
+
+    .menu-bar::before {
+        top: -25px;
+    }
+
+    .trangile {
+        margin-top: -9%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .links {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        margin-top: 1%;
+        font-size: 35px;
+    }
+
+    .menu-bar {
+        display: none;
+        margin-left: 68%;
+        top: -25px;
+        right: 23px;
+        margin-top: 6%
+    }
+
+    .trangile {
+        margin-top: -9%;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .links {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+}
+
+/**end the nav**/
+/* start the login**/
+.adminform {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    margin-top: 5%;
+}
+
+.adminform .tagg {
+    position: absolute;
+    top: -9%;
+    left: 37%;
+    color: gold;
+    transform: rotate(-35deg);
+    font-size: 35px;
+}
+
+.adminform h1 {
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.adminform input {
+    width: 45%;
+    border: 1px solid var(--main-color);
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.adminform .login {
+    width: 15%;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 28%;
+}
+
+.adminform .warn {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
+
+/**end the login**/
+/**start the dashbord**/
+
+.allinfo {
+    margin: 5% 0;
+    text-align: center;
+}
+
+.allinfo .doc,
+.allinfo .sic {
+    min-width: 48%;
+    margin-left: 2%;
+    background-color: #6f42c1;
+    color: #fff;
+    padding: 2%;
+    font-size: 60px;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 0.45s ease-in-out;
+}
+
+.allinfo .doc:hover,
+.allinfo .sic:hover {
+    box-shadow: 10px 10px 10px #000;
+}
+
+.allinfo .doc a,
+.allinfo .sic a {
+    color: #fff;
+}
+
+.allinfo .doc a:hover,
+.allinfo .sic a:hover {
+    text-decoration: none;
+}
+
+.allinfo .doc span,
+.allinfo .sic span {
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    font-size: 30px;
+    background-color: #f00;
+    padding: 1%;
+    box-shadow: 10px 10px 10px #3e3939;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.allinfo .doc .adddoc {
+    font-size: 30px;
+    position: absolute;
+    bottom: 7%;
+    right: 2%;
+    color: #fff;
+    transition: all 0.45s ease-in-out;
+}
+
+.allinfo .doc .adddoc:hover {
+    color: #6f42c1;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1%;
+    cursor: pointer;
+}
+
+/**end the dasbord**/
+/**start the doctors**/
+.menu {
+    color: #6f42c1;
+    margin-left: 1%;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+.hideadmin {
+    display: none;
+}
+
+.dashbordmenu {
+    background-color: #9400d3;
+    width: 300px;
+    height: 100vh;
+    border-radius: 8px;
+    display: none;
+}
+
+.dashbordmenu .adminamge {
+    width: 100%;
+    position: relative;
+}
+
+.dashbordmenu .adminamge img {
+    width: 126px;
+    margin-left: 27.33%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-top: 2%;
+    height: 126px;
+}
+
+.adminamge span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4db04d;
+    top: 89%;
+    left: 55%;
+}
+
+.dashbordmenu .nameadmin {
+    text-align: center;
+    margin-top: 2%;
+    font-weight: bold;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.dashbordmenu ul {
+    color: #fff;
+    margin-left: 2%;
+    font-size: 22px;
+}
+
+.dashbordmenu ul li {
+    margin: 5% 0;
+    font-weight: bold;
+
+}
+
+.dashbordmenu ul li a {
+    color: #fff;
+    margin-left: 2%;
+}
+
+.dashbordmenu ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.showcat,
+.hidecat {
+    position: absolute;
+    top: 53%;
+    left: 15%;
+    cursor: pointer;
+}
+
+.hidecat,
+.categorsick {
+    display: none;
+}
+
+.headoc {
+    font-size: 66px;
+    margin: 3% 0;
+    color: #3465bb;
+    text-transform: uppercase;
+}
+
+.main-table tr:first-of-type td {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.main-table tr:not(:first-of-type):odd {
+    background-color: #eee;
+}
+
+.main-table td {
+    text-align: center;
+}
+
+tr td .fa-star {
+    color: gold;
+}
+
+.timagedoc {
+    width: 33.33%;
+    text-align: center;
+    margin-left: 33.33%;
+    position: relative;
+}
+
+.timagedoc img {
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.timagedoc span {
+    color: #fff;
+    background-color: #28a745;
+    padding: 2px;
+    position: absolute;
+    border-radius: 8px;
+    top: 69%;
+    width: 76%;
+    left: 77%;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.infoeyes {
+    color: #000;
+    transition: all 0.45s ease-in-out;
+}
+
+.infoeyes:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.infoeyes:hover i {
+    color: #080;
+}
+.added
+{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-transform: capitalize;
+}
+/**end the doctors**/
+/**start the add doctors**/
+.formdoc {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+form div {
+    margin: 1% 0;
+}
+
+form input::placeholder {
+    text-transform: capitalize;
+}
+
+.fileimage,
+.fileimageadmin {
+    position: relative;
+    z-index: 55;
+}
+.fileimageadmin
+{
+    margin: auto;
+    width: 513px;
+}
+
+.fileimage .docimage,
+.fileimageadmin .docimage {
+    z-index: 12;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.fileimage span,
+.fileimageadmin span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 5;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.log {
+    width: 25%;
+    text-transform: uppercase;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+}
+
+/**end the add doctors**/
+/**start the sick pepole**/
+.cat {
+    min-width: 48%;
+    background-color: #6f42c1;
+    margin-bottom: 2%;
+    border-radius: 4%;
+    position: relative;
+    transition: all 0.45s ease-in-out;
+}
+
+.cat:hover {
+    box-shadow: 10px 10px 10px #000;
+}
+
+.cat:not(:first-of-type),
+.cat:not(:nth-of-type(3)) {
+    margin-left: 2%;
+}
+
+.cat .ser1image,
+.cat .ser2image,
+.cat .ser3image,
+.cat .ser4image {
+    text-align: center;
+    width: 21%;
+    margin-left: 39%;
+    margin-top: 4%;
+}
+
+.cat .ser1image img .cat .ser2image img {
+    width: 95%;
+}
+
+.cat .ser3image img {
+    width: 50%;
+}
+
+.cat .ser4image img {
+    width: 100%;
+}
+
+.cat p {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 5%;
+    font-size: 30px;
+}
+
+.cat span {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    font-size: 30px;
+    background-color: #f00;
+    padding: 1%;
+    box-shadow: 10px 10px 10px #3e3939;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: #fff;
+}
+
+/***end the sick people**/
+/**start the alinfo**/
+.headinfodoc {
+    font-size: 66px;
+    margin: 3% 0;
+    color: #3465bb;
+}
+
+/**end the allinfo**/
+/**start the porfile admin**/
+.editadmin
+{
+    color: #fff;
+    font-weight: bold;
+}
+.editadmin:hover 
+{
+    color: #fff;
+    text-decoration: none;
+}
+/**end the profile admin**/
+/****/
+/**start the footer*/
+footer {
+    background-color: #1b4a61;
+    color: #fff;
+    padding: 10px;
+}
+
+footer div a {
+    font-weight: bold;
+    color: #fff;
+}
+
+footer div a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+footer .social {
+    margin-left: 0.5%;
+    color: #fff;
+    transition: all 0.45s ease-in-out;
+    font-size: 20px;
+}
+
+footer .social:hover {
+    color: var(--main-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/**end the footer*/
