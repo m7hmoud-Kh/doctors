@@ -1,6 +1,6 @@
 <?php 
 
-$host = "mysql:host=localhost;dbname=hospital";
+$host = "mysql:host=localhost;dbname=doc_hospital";
 $user = "root";
 $pass = "";
 try 
